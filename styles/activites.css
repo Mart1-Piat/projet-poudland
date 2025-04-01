@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*------- Bouton Réservation -------*/
+
+.bouton-reservation {
+    justify-content: center;
+    display: flex;
+}
+
+.bouton-reservation a { 
+    margin:50px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 800px;
+    text-decoration: none;
+    text-align:center;
+    color: rgb(255, 255, 255);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    background-color: rgba(40, 17, 86, 0.5);    
+    background-size: cover;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.bouton-reservation a:hover {
+    background-color: rgba(40, 17, 86, 1);
+    box-shadow: 0px 0px 10px white;
+}
+
+
+/*------- Cartes - formes et image -------*/
+
+.card-illus{
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height:450px;
+    border-radius: 10px;
+    overflow:hidden;
+}
+
+.card-illus:nth-child(1){
+    background-image:url("../images/magicpotion.jpg");
+}
+
+
+.card-illus:nth-child(2){
+    background-image: url("../images/montagnerusse.jpg");
+
+}
+
+.card-illus:nth-child(3){
+    background-image: url("../images/battle.png");
+}
+
+.card-illus:nth-child(4){
+    background-image: url("../images/enchantedforest.jpg");
+}
+
+.card-illus:nth-child(5){
+    background-image: url("../images/boat.jpg");
+}
+
+.volet-activites {
+    padding-top: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 0px;
+    gap: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+/*------- Hover sur les cartes -------*/
+
+.card-illus:hover {
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+
+.card-illus .titre{
+    opacity:0;
+}
+
+.card-illus:hover .titre {
+    opacity:1;
+    padding: 20px;
+    font-weight: bolder;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:x-large;
+    color:white;
+    background-image: url("../images/fondviolet.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    transition: 0.2s;
+}
+
+.card-illus .desc{
+    opacity:0;
+}
+
+.card-illus:hover .desc {
+    opacity:1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding:5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:medium;
+    color:rgb(0, 0, 0);
+    background-color: rgba(230, 230, 250, 0.6);
+
+}
+
+.info-supp {
+    flex-basis: 100%; /* Ensures it spans the full width */
+    width: 100%;      /* Explicitly takes up the entire row */
+    margin-top: 20px;  /* Adds space above if needed */
+    margin-bottom:20px;
+    color: white;
+}
+
+
+/*------- Spécificité Ecran Etroit -------*/
+
+@media screen and (max-width: 720px) {
+
+    .volet-activites {
+        padding-left: 5vw;
+        padding-right:5vw;
+    }
+
+    .card-illus{
+        width:max-content;
+        height:450px;
+        border-radius: 10px;
+        overflow:hidden;
+        background-repeat: no-repeat;   
+    }
+
+    .card-illus .desc{
+        opacity:1;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding:5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size:medium;
+        color:rgb(0, 0, 0);
+        background-color: rgba(230, 230, 250, 0.6);
+    
+    }
+    
+    .card-illus .titre{
+        opacity:1;
+        padding: 20px;
+        font-weight: bolder;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size:x-large;
+        color:white;
+        background-image: url("../images/bar.jpg");
+        background-size: cover;
+        background-repeat:no-repeat;
+    }
+
+}

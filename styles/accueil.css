@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Fell;
+    src: url(../IMFellEnglishSC-Regular.ttf);
+}
+
+*{	
+	margin: 0;
+    padding: 0;
+}
+
+
+header  {
+    display: flex;
+    align-items: center;
+	justify-content : center ;
+	background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px ;
+}
+
+header img{
+    max-width: 350px;
+	align-items: center;
+}
+
+header img:hover{
+    filter:drop-shadow(0px 0px 3px white);
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+	align-items : center; 
+}
+
+nav a {
+    text-decoration: none;
+    opacity: 0.5;
+    padding: 5px 20px;
+    color: white;
+    font-family: 'Fell';
+    font-size: larger;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: opacity 0.3s, box-shadow 0.3s;
+}
+
+nav a.ici {
+    opacity:1;
+}
+
+nav a:hover {
+    opacity: 1;
+    box-shadow: 0px 0px 10px white;
+}
+
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url("../images/background1080p.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+
+/*------ Annonce Voldemort ------*/
+
+.annonce-voldy {
+    margin-top:50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 10%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.annonce-voldy img {
+    max-width: 300px;
+    object-fit: cover;
+}
+
+.annonce-voldy-text h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.annonce-voldy-text p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+.video-vold {
+	display : flex ;
+	justify-content: space-around;
+}
+
+iframe {
+    border: 0px;
+}
+
+
+/*------ Présentation aux 3 publics ------*/
+
+#presentation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 50px 10%;
+}
+#presentation h1 {
+    margin-bottom: 15px;
+}
+
+#presentation .texte {
+    text-align: center;
+    background-image: url("../images/fondviolet.jpg");
+	background-repeat:no-repeat;
+	background-size: cover;
+	padding: 20px;
+    border-radius: 10px;
+	color:white;
+}
+
+#presentation img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+/*------ Modification écrans étroits ------*/
+
+@media screen and (max-width: 1000px) {
+    #presentation {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        padding: 50px 10%;
+    }
+    
+    #presentation .texte {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        background-image: url("../images/fondviolet.jpg");
+        background-repeat:no-repeat;
+        background-size: cover;
+        padding: 20px;
+        border-radius: 10px;
+        color:white;
+    }
+    
+    #presentation img {
+        display:none;
+        margin:0;
+        padding:0;
+    }
+
+    
+}
+
+footer  {
+    
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 0.9rem;
+	
+	
+	
+}
+footer div p {
+    font-size: 14px;
+    color: white;
+}
+
+
+footer img {
+	max-height : 50px;
+	max-width : 175px;
+}
+

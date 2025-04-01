@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+        <meta charset="utf-8" />
+        <title>Poudland - Le premier parc réellement magique!</title>
+		<link rel="icon" type="image/png" href="./images/Logotransparent.png">
+    
+        <!-- Lien vers la feuille de style -->
+        <link rel="stylesheet" href="./styles/accueil.css" />
+        <link rel="stylesheet" href="./styles/contact.css" />
+    </head>
+
+    <body>
+        <header>
+            <a class="accueil" href="./index.html">
+                <img src="./images/logodefslogan.png" alt="Logo Poudland">
+
+            </a>
+            <nav>
+                <a href="./index.html">Accueil</a>
+                <a href="./activites.html">Activités</a>
+                <a class="ici" href="./contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+			<section class="infos-contact">
+				<div class="contact-container">
+					<div class="bloc-texte-contact">
+						<h2>Comment nous contacter ?</h2>
+						<div class="adresse">
+							<h4>Par courrier :</h4>
+							<p>Park rd, 66666 Loch Duich<br>Scotland</p>
+						</div>
+						<div class="telephone">
+							<h4>Par téléphone, H24 et 7/7 jours :</h4>
+							<p>07-333-433-335</p>
+						</div>
+						<div class="email">
+							<h4>Par e-mail :</h4>
+							<p>Jedusor@Poudland.gb</p>
+						</div>
+					</div>
+					<img class="bloc-img-contact" src="./images/maraudersmap.png" alt="Image Carte du Maraudeur">
+				</div>
+
+				<!--intégration carte-->
+				<div class="carte-interactive">
+					<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-5.614013671875001%2C57.1965518965869%2C-5.160827636718751%2C57.36357114046802&amp;layer=mapnik" style="border: 1px solid black">
+					</iframe>
+					<br/>
+					<small><a href="https://www.openstreetmap.org/#map=12/57.2802/-5.3874">Afficher une carte plus grande</a></small>
+				</div>
+				<!--fin intégration carte-->
+			</section>
+
+			<div class="reservation-form">
+				<a id="reservation-anchor"></a>			   
+				<form action="traitement_reservation.php" method="POST">
+					<h1>Préparez votre séjour</h1>
+					
+					<label for="hotel">Choisissez un hôtel :</label>
+					<select id="hotel" name="hotel" required>
+						<option value="">-- Sélectionnez un hôtel --</option>
+						<option value="auberge_baguette_magique">L'Auberge de la Baguette Magique</option>
+						<option value="hotel_sortileges_eternels">L'Hôtel des Sortilèges Éternels</option>
+						<option value="manoir_mages">Le Manoir des Mages</option>
+						<option value="chateau_enchante">Le Château Enchanté</option>
+					</select>
+
+					
+					<label for="activite">Choisissez une activité :</label>
+					<select id="activite" name="activite" required>
+						<option value="">-- Sélectionnez une activité --</option>
+						<option value="atelier-potions">Atelier créatif: Potion magique</option>
+						<option value="atelier-parchemins">Atelier créatif: Parchemins enchantés</option>
+						<option value="atelier-sortilege">Atelier créatif: Votre premier sortilège</option>
+						<option value="attraction-grandhuit">Attraction: Grand Huit autour du château</option>
+						<option value="spectacles-balai">Spectacle: Voltige à balai</option>
+						<option value="spectacles-duel">Spectacle: Duel de sorciers</option>
+						<option value="parcours-sante">Parcours de santé - Guidé</option>
+						<option value="location-barque">Location de barque</option>
+					</select>
+
+					
+					<label for="date_arrivee">Date d'arrivée :</label>
+					<input type="date" id="date_arrivee" name="date_arrivee" required>
+
+					<label for="date_depart">Date de départ :</label>
+					<input type="date" id="date_depart" name="date_depart" required>
+
+					
+					<label for="nom">Nom :</label>
+					<input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+					<label for="prenom">Prénom :</label>
+					<input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+
+					<button type="submit">Réserver</button>
+				</form>
+			</div>
+		</main>
+		<footer>
+			<div>
+				<p>Walid BOUSSAA</p>
+				<p>Martin PIAT</p>
+			</div>
+			<img src="./images/Logo200x45.jpg" class="saclay" alt="Logo Saclay">
+			<p  class="rights">© 2024 Tous droits réservés</p>
+		</footer>
+    </body>  
+</html>
